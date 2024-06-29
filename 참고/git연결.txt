@@ -35,3 +35,12 @@ $cat ~/.ssh/id_rsa.pub 하고 나오는거 전부 긁어서 복사
 
 8. 레포지토리 클론
 $git clone git@github.com:ChampBlue/ROS.git
+
+
+9. 레포지토리 수정
+ROS 폴더 드가서 뭐 수정하고
+
+git add .
+git commit -m "여기 설명"
+git push origin main
+
