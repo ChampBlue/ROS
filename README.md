@@ -1,19 +1,19 @@
 # ROS
  목차
 1. ROS 기초 이해
-    ROS 개요
-    ROS의 기본 구성 요소 (노드, 메시지, 토픽, 서비스, 액션)
-    ROS 설치 및 환경 설정
+    - ROS 개요
+    - ROS의 기본 구성 요소 (노드, 메시지, 토픽, 서비스, 액션)
+    - ROS 설치 및 환경 설정
 2. ROS 환경 설정
-    Ubuntu 설치 및 설정
-    ROS Noetic 설치
-    Catkin 워크스페이스 설정
-    ROS 패키지 설치 및 관리
+    - Ubuntu 설치 및 설정
+    - ROS Noetic 설치
+    - Catkin 워크스페이스 설정
+    - ROS 패키지 설치 및 관리
 
 3. ROS 기본 명령어 및 툴 사용법
-    ROS 명령어 (roscore, rosrun, roslaunch, rosnode, rostopic 등)
-    RViz 사용법
-    rqt 사용법
+    - ROS 명령어 (roscore, rosrun, roslaunch, rosnode, rostopic 등)
+    - RViz 사용법
+    - rqt 사용법
 
 4. 기본 ROS 프로그래밍
     ROS 패키지 생성
