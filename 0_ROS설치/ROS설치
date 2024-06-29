@@ -1,0 +1,21 @@
+## ROS noetic 기준
+
+# pc 
+- ubuntu 20.04 lts
+- https://wiki.ros.org/noetic/Installation/Ubuntu
+- 위 링크 따라 하다가 ros는
+sudo apt install ros-noetic-desktop-full 이거로 설치
+
+# rpi
+- ubuntu 20.04.5 lts server
+- https://wiki.ros.org/noetic/Installation/Ubuntu
+- 위 링크 따라 하다가 ros는
+sudo apt install ros-noetic-ros-base 이거로 설치 
+
+
+# ros 환경설정 $source /opt/ros/noetic/setup.bash
+    1. 위 명령어는 ros 환경을 설정하는 데 사용됨
+    2. 위 명령어는 ros noetic이 설치된 경로의 setup.bash 스크립트를 실행하여 ros 환경 변수를 현재 쉘 세션에 로드함
+    3. 이를 통해 ros 명령어와 패키지를 제대로 사용할 수 있게 됨
+    4. 터미널이 실행되면 자동으로 위 명령어 실행되게 하는게 좋음
+    -> ~/.bashrc에 위 명령어 추가
