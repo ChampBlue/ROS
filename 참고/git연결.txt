@@ -1,0 +1,37 @@
+# git
+
+1. $git --version 으로 깃 설치 확인
+
+2. 안나오면
+sudo apt install git
+
+3. 사용자 정보 설정
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+4. ssh키 생성
+$ssh-keygen -t rsa -b 4096 -C "your.email@example.com"
+-> 뭐 대충 아래 내용 나오는데 엔터 계속치면 됨(엔터 == 기본 경로)
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/your_username/.ssh/id_rsa):
+
+
+5. ssh에이전트 시작하고 키 추가
+$eval "$(ssh-agent -s)"
+$ssh-add ~/.ssh/id_rsa 
+
+
+6. ssh키 복사
+$cat ~/.ssh/id_rsa.pub 하고 나오는거 전부 긁어서 복사
+
+
+7. 깃허브 설정
+- 오른쪽 상단의 프로필 사진을 클릭하고, "Settings"를 선택합니다.
+- 왼쪽 사이드바에서 "SSH and GPG keys"를 클릭합니다.
+- "New SSH key" 버튼을 클릭합니다.
+- "Title" 필드에 키의 이름을 입력하고, "Key" 필드에 공개 키를 붙여넣습니다.
+- "Add SSH key" 버튼을 클릭합니다.
+
+
+8. 레포지토리 클론
+$git clone git@github.com:ChampBlue/ROS.git
