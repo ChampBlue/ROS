@@ -1,14 +1,20 @@
 import rospy
-from geometry_msgs.msg import Twist
-from geometry_msgs.msg import Vector3
+from std_srvs.srv import SetBool, SetBoolResponse
 
-def callback(data):
-    rospy.loginfo("Received cmd_vel: linear=%s angular=%s", data.linear, data.angular)
-    
-def listener():
-    rospy.init_node('turtlebot_subscriber', anonymous=True)
-    rospy.Subscriber('/cmd_vel', Twist, callback)
-    rospy.spin()
+def handle_set_bool(req):
+    rospy.loginfo("Request data: %s" % req.data)
+    if req.data:
+        message = "Received True"
+    else:
+        message = "Received False"
+    response = SetBoolResponse(success=True, message=message)
+    return response
 
-if __name__ == '__main__':
-    listener()
+def set_bool_server():
+    rospy.init_node('set_bool_server')  
+    s = rospy.Service('set_bool_service', SetBool, handle_set_bool) 
+    rospy.loginfo("SetBool service server ready.")
+    rospy.spin() 
+
+if __name__ == "__main__":
+    set_bool_server()
